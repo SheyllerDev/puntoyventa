@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja para Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="caja-container">
+        <h1>Sistema de Caja Restaurante 🍗</h1>
+
+        <div id="seccion-tienda">
+            <h2>Seleccione la Tienda</h2>
+            <div class="input-group">
+                <select id="selector-tienda">
+                    <option value="">-- Elige una tienda --</option>
+                    </select>
+            </div>
+            <button id="btn-confirmar-tienda" class="btn btn-principal">Confirmar Tienda</button>
+        </div>
+
+        <div id="seccion-tipo-orden" class="hidden">
+            <h2>Tipo de Orden</h2>
+            <div class="acciones">
+                <button id="btn-salon" class="btn btn-principal">Salón</button>
+                <button id="btn-llevar" class="btn btn-secundario">Para Llevar</button>
+                <button id="btn-volver-inicio-tipo" class="btn btn-peligro">Volver al Inicio</button>
+            </div>
+        </div>
+        
+        <div id="seccion-mesas" class="hidden">
+             <h2 id="titulo-seccion-mesas"></h2>
+             <div id="mesas-grid" class="mesas-grid">
+                 </div>
+             <button id="btn-volver-tipo-orden" class="btn btn-secundario">Volver</button>
+        </div>
+
+
+        <div id="caja-principal" class="hidden">
+            <h3 id="titulo-operacion"></h3>
+            <div id="seccion-venta">
+                
+                <div class="venta-layout">
+                    <div class="menu-container">
+                        <h2>Menú</h2>
+                        <div id="menu-items" class="menu-grid"></div>
+                    </div>
+
+                    <div class="orden-container">
+                        <div class="orden-actual">
+                            <h2>Orden Actual</h2>
+                            <ul id="lista-orden"></ul>
+                            <div class="total">
+                                <strong>TOTAL CONSUMO: S/ <span id="total-consumo">0.00</span></strong>
+                            </div>
+                        </div>
+                        <button id="btn-cobrar" class="btn btn-principal">Proceder al Cobro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="seccion-pago" class="hidden">
+                <h2>Detalles del Pago</h2>
+                <div class="resumen-pago">
+                    <h3>Total a Pagar: S/ <span id="pago-total-consumo">0.00</span></h3>
+                </div>
+                
+                <form id="form-pago">
+                    <div class="pago-layout">
+                        <div class="metodos-pago">
+                            <div class="input-group">
+                                <label for="pago-yape1">Yape 1:</label>
+                                <input type="number" id="pago-yape1" min="0" step="0.10" placeholder="0.00">
+                            </div>
+                            <div class="input-group">
+                                <label for="pago-yape2">Yape 2:</label>
+                                <input type="number" id="pago-yape2" min="0" step="0.10" placeholder="0.00">
+                            </div>
+                            <div class="input-group">
+                                <label for="pago-efectivo">Efectivo:</label>
+                                <input type="number" id="pago-efectivo" min="0" step="0.10" placeholder="0.00">
+                            </div>
+                            <div class="input-group">
+                                <label for="pago-tarjeta">Tarjeta:</label>
+                                <input type="number" id="pago-tarjeta" min="0" step="0.10" placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <div class="pago-resumen-acciones">
+                            <div class="calculo-final">
+                                <p>Total Pagado: S/ <span id="total-pagado">0.00</span></p>
+                                <p>Vuelto: S/ <span id="vuelto">0.00</span></p>
+                            </div>
+                            
+                            <div id="mensaje-estado" class="mensaje"></div>
+
+                            <div class="acciones">
+                                <button type="submit" id="btn-finalizar" class="btn btn-exito">Finalizar y Registrar Venta</button>
+                                <button type="button" id="btn-volver" class="btn btn-secundario">Volver a la Venta</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <button id="btn-volver-inicio" class="btn btn-peligro">Volver al Inicio</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

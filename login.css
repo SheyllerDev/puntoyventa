@@ -1,0 +1,29 @@
+.login-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    border-bottom: none;
+}
+
+.login-container .input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login-container .input-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.login-container .mensaje.hidden {
+    display: none;
+}
